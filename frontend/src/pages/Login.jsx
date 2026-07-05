@@ -15,7 +15,7 @@ function Login() {
     e.preventDefault();
     try {
       // Reaching out to our future Spring Boot backend on port 8080
-      const response = await axios.post('http://localhost:8080/api/auth/login', formData);
+      const response = await axios.post('https://my-fullstack-website-qqtm.onrender.com', formData);
       localStorage.setItem('user', JSON.stringify(response.data.username));
       navigate('/dashboard');
     } catch (err) {
