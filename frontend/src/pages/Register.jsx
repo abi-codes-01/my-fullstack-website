@@ -16,7 +16,7 @@ function Register() {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:8080/api/auth/register', formData);
+      const response = await axios.post('https://my-java-backend-u1df.onrender.com/api/auth/register', formData);
       setMessage(response.data.message + " Redirecting to login...");
       setTimeout(() => navigate('/'), 2000);
     } catch (err) {
